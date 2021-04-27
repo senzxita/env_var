@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% if book_author %}
+        <!-- <p>
+            Available books {{ all_books }}
+        </p> -->
+        {% for author in all_books %}
+            <p>{{ author.book_author }}</p>
+            <p>{{ author.year_published}}</p>
+            <p>{{ author.book_title }}</p>
+            {{author.book_author | title }}
+        {% endfor %}
+
+        <p>
+            Lorem, ipsum dolor sit amet
+            consectetur adipisicing elit. 
+            Laudantium magni id sint, 
+            saepe ullam rem quo voluptate, 
+            nulla sapiente officiis nobis unde ipsam? 
+            Totam perspiciatis minima corrupti odio possimus autem!
+        </p>
+        <p>
+            Lorem ipsum dolor sit, amet consectetur 
+            adipisicing elit. Repellendus vero quaerat 
+            recusandae necessitatibus magni maxime 
+            ratione cumque culpa non laudantium.
+        </p>
+        {# These are comments#}
+    {% endif %}
+</body>
+</html>
